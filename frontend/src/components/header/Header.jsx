@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 const Header = ({ isAuth }) => {
   return (
     <header>
-      <div className="logo">E-Learning</div>
+      <div className="logo">Edu-Learn</div>
 
       <div className="link">
         <Link to={"/"}>Home</Link>
         <Link to={"/courses"}>Courses</Link>
         <Link to={"/about"}>About</Link>
+        {isAuth && <Link to={"/ai-course"}>AI Course Generator</Link>}
         {isAuth ? (
           <Link to={"/account"}>Account</Link>
         ) : (
